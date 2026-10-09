@@ -95,3 +95,7 @@ Create a `.env` file in the project root:
 ```env
 DATABASE_URL=postgres://dodo_user:change_this_password@localhost:5432/dodo_payments
 RUST_LOG=debug
+
+
+<img width="5336" height="3228" alt="DB_schema" src="https://github.com/user-attachments/assets/6e5feb45-0f4e-4f5a-8603-a4c9af94376e" />
+
