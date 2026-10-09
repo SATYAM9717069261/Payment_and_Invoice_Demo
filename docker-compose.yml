@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: dodo-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dodo_user
+      POSTGRES_PASSWORD: change_this_password
+      POSTGRES_DB: dodo_payments
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dodo_user -d dodo_payments"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+
