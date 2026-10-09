@@ -1,5 +1,4 @@
-from pathlib import Path
-content = """# Dodo Payments Backend Assignment
+
 
 ## What I am building
 
